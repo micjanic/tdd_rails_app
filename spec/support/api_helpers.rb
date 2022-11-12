@@ -1,9 +1,11 @@
-module ApiHelpers
-    def json
-        JSON.parse(response.body).deep_symbolize_keys
-    end
+# frozen_string_literal: true
 
-    def json_data
-        json[:data]
-    end
+module ApiHelpers
+  def json
+    JSON.parse(response.body).deep_symbolize_keys
+  end
+
+  def json_data
+    json[:data]
+  end
 end

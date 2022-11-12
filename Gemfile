@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -21,18 +23,18 @@ gem 'puma', '~> 4.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'jsonapi-serializer'
 gem 'jsom-pagination'
 gem 'jsonapi_errors_handler'
-gem "octokit", "~> 4.0"
+gem 'jsonapi-serializer'
+gem 'octokit', '~> 4.0'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 4.0.1'
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 4.0.1'
 end
 
 group :development do
